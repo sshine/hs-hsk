@@ -1,0 +1,49 @@
+name: hsk
+version: 0.1.0
+extra-source-files:
+  - README.md
+
+dependencies:
+  - base
+  - containers
+  - file-embed
+  - optparse-generic
+  - text
+  - text-trie
+
+default-extensions:
+  - OverloadedStrings
+
+library:
+  exposed-modules:
+    - Program
+    - Language.Chinese.HSK
+  source-dirs: src
+
+executables:
+  hsk:
+    main: app/Main.hs
+    dependencies:
+      - hsk
+
+tests:
+  test:
+    main: test.hs
+    source-dirs: test
+    dependencies:
+      - jq
+      - tasty
+      - tasty-discover
+      - tasty-hspec
+      - tasty-hedgehog
+      - hedgehog
+      - hspec
+
+benchmarks:
+  bench:
+    main: bench.hs
+    source-dirs: bench
+    dependencies:
+      - hsk
+      - criterion
+    ghc-options: -O2

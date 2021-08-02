@@ -1,0 +1,92 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hsk
+version:        0.1.0
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Program
+      Language.Chinese.HSK
+  other-modules:
+      Paths_hsk
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+  build-depends:
+      base
+    , containers
+    , file-embed
+    , optparse-generic
+    , text
+    , text-trie
+  default-language: Haskell2010
+
+executable hsk
+  main-is: app/Main.hs
+  other-modules:
+      Paths_hsk
+  default-extensions:
+      OverloadedStrings
+  build-depends:
+      base
+    , containers
+    , file-embed
+    , hsk
+    , optparse-generic
+    , text
+    , text-trie
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: test.hs
+  other-modules:
+      Paths_hsk
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+  build-depends:
+      base
+    , containers
+    , file-embed
+    , hedgehog
+    , hspec
+    , jq
+    , optparse-generic
+    , tasty
+    , tasty-discover
+    , tasty-hedgehog
+    , tasty-hspec
+    , text
+    , text-trie
+  default-language: Haskell2010
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  main-is: bench.hs
+  other-modules:
+      Paths_hsk
+  hs-source-dirs:
+      bench
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -O2
+  build-depends:
+      base
+    , containers
+    , criterion
+    , file-embed
+    , hsk
+    , optparse-generic
+    , text
+    , text-trie
+  default-language: Haskell2010
