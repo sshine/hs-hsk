@@ -59,8 +59,8 @@ test-suite test
     , containers
     , file-embed
     , hedgehog
+    , hsk
     , hspec
-    , jq
     , optparse-generic
     , tasty
     , tasty-discover
