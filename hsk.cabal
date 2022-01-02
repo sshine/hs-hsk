@@ -18,8 +18,6 @@ library
       Paths_hsk
   hs-source-dirs:
       src
-  default-extensions:
-      OverloadedStrings
   build-depends:
       base
     , containers
@@ -33,8 +31,6 @@ executable hsk
   main-is: app/Main.hs
   other-modules:
       Paths_hsk
-  default-extensions:
-      OverloadedStrings
   build-depends:
       base
     , containers
@@ -49,11 +45,10 @@ test-suite test
   type: exitcode-stdio-1.0
   main-is: test.hs
   other-modules:
+      Language.Chinese.HSKTest
       Paths_hsk
   hs-source-dirs:
       test
-  default-extensions:
-      OverloadedStrings
   build-depends:
       base
     , containers
@@ -77,8 +72,6 @@ benchmark bench
       Paths_hsk
   hs-source-dirs:
       bench
-  default-extensions:
-      OverloadedStrings
   ghc-options: -O2
   build-depends:
       base

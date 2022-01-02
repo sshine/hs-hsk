@@ -11,9 +11,6 @@ dependencies:
   - text
   - text-trie
 
-default-extensions:
-  - OverloadedStrings
-
 library:
   exposed-modules:
     - Program
