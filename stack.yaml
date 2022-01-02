@@ -1,5 +1,6 @@
-resolver: lts-18.5
+resolver: lts-18.20
 packages:
   - .
 extra-deps:
-  - text-trie-0.2.5.0@sha256:8064c70e67dd3db1a04f3fc002b130d167fbc4da4101919fbb0da4484a917ca5,4377
+  - git: https://github.com/sshine/text-trie # 0.2.5.1
+    commit: f5059dbd945c638be4b83ac80ec964952ae0b8e1
